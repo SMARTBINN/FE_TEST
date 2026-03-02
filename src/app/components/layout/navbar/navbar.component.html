@@ -1,0 +1,117 @@
+<header
+  [ngClass]="{
+    'bg-white/90 backdrop-blur-md shadow-sm py-3': isScrolled,
+    'bg-transparent py-5': !isScrolled
+  }"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+>
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="flex items-center justify-between">
+
+      <!-- Logo -->
+      <a routerLink="/" class="flex items-center gap-2 group">
+        <div class="bg-green-100 p-2 rounded-full group-hover:bg-green-200 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+        </div>
+        <span class="text-xl font-bold text-gray-900 tracking-tight">BIOLOOP</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a
+          *ngFor="let link of navLinks"
+          [href]="link.href"
+          class="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
+        >
+          {{ link.key | translate }}
+        </a>
+      </nav>
+
+      <!-- CTA + Language Toggle -->
+      <div class="hidden md:flex items-center gap-3">
+
+        <!-- Language Toggle -->
+        <button
+          (click)="languageService.toggleLanguage()"
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-200
+                 text-sm font-medium text-gray-600 hover:border-green-400 hover:text-green-600
+                 transition-colors"
+        >
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+          </svg>
+          {{ languageService.currentLang() === 'fr' ? 'عربي' : 'FR' }}
+        </button>
+
+        <!-- CTA -->
+        <button
+          class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium
+                 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors
+                 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+        >
+          {{ 'NAV.CTA' | translate }}
+        </button>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button
+        class="md:hidden p-2 text-gray-600"
+        (click)="toggleMobileMenu()"
+        aria-label="Toggle menu"
+      >
+        <svg *ngIf="isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+        <svg *ngIf="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    *ngIf="isMobileMenuOpen"
+    class="md:hidden absolute top-full left-0 right-0 bg-white border-b
+           border-gray-100 shadow-lg p-4 flex flex-col gap-4"
+  >
+    <a
+      *ngFor="let link of navLinks"
+      [href]="link.href"
+      class="text-base font-medium text-gray-700 py-2 border-b border-gray-50"
+      (click)="closeMobileMenu()"
+    >
+      {{ link.key | translate }}
+    </a>
+
+    <!-- Language toggle mobile -->
+    <button
+      (click)="languageService.toggleLanguage(); closeMobileMenu()"
+      class="w-full flex items-center justify-center gap-2 py-2 border border-gray-200
+             rounded-full text-sm font-medium text-gray-600 hover:border-green-400
+             hover:text-green-600 transition-colors"
+    >
+      <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
+      </svg>
+      {{ languageService.currentLang() === 'fr' ? 'عربي' : 'FR' }}
+    </button>
+
+    <button
+      class="w-full mt-1 inline-flex items-center justify-center px-4 py-2 text-sm
+             font-medium rounded-full bg-green-600 text-white hover:bg-green-700
+             transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
+    >
+      {{ 'NAV.CTA' | translate }}
+    </button>
+  </div>
+</header>

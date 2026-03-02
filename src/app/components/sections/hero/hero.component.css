@@ -1,0 +1,59 @@
+/* ─── Floating badges ─── */
+.float-badge {
+  animation: floatBadge 3.5s ease-in-out infinite;
+}
+.float-badge:nth-child(2) { animation-delay: 0.6s; }
+.float-badge:nth-child(3) { animation-delay: 1.2s; }
+.float-badge:nth-child(4) { animation-delay: 1.8s; }
+
+@keyframes floatBadge {
+  0%,100% { transform: translateY(0px);   }
+  50%      { transform: translateY(-8px);  }
+}
+
+/* Keep translateX for the centered badge while floating */
+.float-badge[style*="translateX"] {
+  animation: floatBadgeCenter 3.5s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+@keyframes floatBadgeCenter {
+  0%,100% { transform: translateX(-50%) translateY(0px);  }
+  50%      { transform: translateX(-50%) translateY(-8px); }
+}
+
+/* ─── Falling organic items into bin ─── */
+.falling-item {
+  top: -30px;
+  animation: fallIntoBin 3s ease-in infinite;
+}
+
+@keyframes fallIntoBin {
+  0%   { top: -40px; opacity: 1; transform: rotate(0deg)   scale(1);   }
+  70%  { top: 170px; opacity: 1; transform: rotate(180deg) scale(0.9); }
+  85%  { top: 200px; opacity: 0; transform: rotate(200deg) scale(0.5); }
+  100% { top: 200px; opacity: 0; transform: rotate(200deg) scale(0.5); }
+}
+
+/* ─── Wave connection line ─── */
+.wave-path {
+  animation: wavePulse 1.8s linear infinite;
+}
+.wave-path-2 {
+  animation: wavePulse 1.8s linear infinite;
+  animation-delay: 0.9s;
+}
+
+@keyframes wavePulse {
+  0%   { stroke-dashoffset: 220; }
+  100% { stroke-dashoffset: 0;   }
+}
+
+/* ─── Bar chart grow animation ─── */
+.bar-anim {
+  animation: barGrow 2s ease-out infinite alternate;
+}
+
+@keyframes barGrow {
+  0%   { opacity: 0.5; filter: brightness(0.8); }
+  100% { opacity: 1;   filter: brightness(1.2); }
+}
