@@ -1,1 +1,136 @@
-<p>services works!</p>
+<section id="services" class="py-28 bg-gradient-to-b from-white to-green-50/40 relative overflow-hidden">
+
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-green-50 rounded-full blur-3xl opacity-40 -z-10"></div>
+
+  <div class="container mx-auto px-4 md:px-6">
+
+    <!-- Header -->
+    <div class="text-center mb-20">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 text-green-700 text-sm font-semibold mb-5 tracking-wide uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+        {{ 'SERVICES.TITLE' | translate }}
+      </div>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+        Ce que nous <span class="text-green-600">proposons</span>
+      </h2>
+      <p class="text-gray-500 max-w-xl mx-auto text-lg leading-relaxed">
+        {{ 'SERVICES.SUBTITLE' | translate }}
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+      <!-- Card 1 -->
+      <div class="service-card group relative bg-white rounded-3xl p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center overflow-hidden cursor-pointer hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10 flex flex-col items-center text-center w-full">
+          <div class="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-green-200 transition-all duration-300">
+            <svg class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+          </div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-semibold mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse"></span>
+            IoT • IA
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4 leading-snug">{{ 'SERVICES.S1' | translate }}</h3>
+          <ul class="space-y-2 mb-8 w-full">
+            <li class="flex items-center justify-center gap-2 text-sm text-gray-500">
+              <svg class="h-4 w-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              {{ 'SERVICES.S1_F1' | translate }}
+            </li>
+            <li class="flex items-center justify-center gap-2 text-sm text-gray-500">
+              <svg class="h-4 w-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              {{ 'SERVICES.S1_F2' | translate }}
+            </li>
+            <li class="flex items-center justify-center gap-2 text-sm text-gray-500">
+              <svg class="h-4 w-4 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              {{ 'SERVICES.S1_F3' | translate }}
+            </li>
+          </ul>
+          <a href="#collecte" class="flex items-center gap-2 text-green-600 font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+            {{ 'SERVICES.LEARN_MORE' | translate }}
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card group relative bg-white rounded-3xl p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center overflow-hidden cursor-pointer hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10 flex flex-col items-center text-center w-full">
+          <div class="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-blue-200 transition-all duration-300">
+            <svg class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/>
+            </svg>
+          </div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+            Dashboard • Alertes
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4 leading-snug">{{ 'SERVICES.S2' | translate }}</h3>
+          <ul class="space-y-2 mb-8 w-full">
+            <li class="flex items-center justify-center gap-2 text-sm text-gray-500">
+              <svg class="h-4 w-4 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              {{ 'SERVICES.S2_F1' | translate }}
+            </li>
+            <li class="flex items-center justify-center gap-2 text-sm text-gray-500">
+              <svg class="h-4 w-4 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              {{ 'SERVICES.S2_F2' | translate }}
+            </li>
+            <li class="flex items-center justify-center gap-2 text-sm text-gray-500">
+              <svg class="h-4 w-4 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              {{ 'SERVICES.S2_F3' | translate }}
+            </li>
+          </ul>
+          <a href="#monitoring" class="flex items-center gap-2 text-blue-600 font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+            {{ 'SERVICES.LEARN_MORE' | translate }}
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card group relative bg-white rounded-3xl p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center overflow-hidden cursor-pointer hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div class="relative z-10 flex flex-col items-center text-center w-full">
+          <div class="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-purple-200 transition-all duration-300">
+            <svg class="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-semibold mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"></span>
+            Rapports • RSE
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4 leading-snug">{{ 'SERVICES.S3' | translate }}</h3>
+          <ul class="space-y-2 mb-8 w-full">
+            <li class="flex items-center justify-center gap-2 text-sm text-gray-500">
+              <svg class="h-4 w-4 text-purple-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              {{ 'SERVICES.S3_F1' | translate }}
+            </li>
+            <li class="flex items-center justify-center gap-2 text-sm text-gray-500">
+              <svg class="h-4 w-4 text-purple-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              {{ 'SERVICES.S3_F2' | translate }}
+            </li>
+            <li class="flex items-center justify-center gap-2 text-sm text-gray-500">
+              <svg class="h-4 w-4 text-purple-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              {{ 'SERVICES.S3_F3' | translate }}
+            </li>
+          </ul>
+          <a href="#analyse" class="flex items-center gap-2 text-purple-600 font-semibold text-sm group-hover:gap-3 transition-all duration-300">
+            {{ 'SERVICES.LEARN_MORE' | translate }}
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-center text-sm text-gray-400 mt-10 italic">
+      {{ 'SERVICES.NOTE' | translate }}
+    </p>
+
+  </div>
+</section>

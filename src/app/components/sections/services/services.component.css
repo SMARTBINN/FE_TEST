@@ -1,0 +1,13 @@
+.service-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.5s ease, translate 0.5s ease;
+}
+
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card:nth-child(2) { transition-delay: 150ms; }
+.service-card:nth-child(3) { transition-delay: 300ms; }

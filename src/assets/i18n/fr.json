@@ -37,7 +37,17 @@
     "S1": "Tri et Collecte Intelligente des déchets",
     "S2": "Monitoring & Supervision",
     "S3": "Analyse et reporting environnemental",
-    "LEARN_MORE": "En savoir plus"
+    "LEARN_MORE": "En savoir plus",
+    "S1_F1": "Capteurs de remplissage temps réel",
+"S1_F2": "Collecte optimisée par IA",
+"S1_F3": "Bacs connectés personnalisables",
+"S2_F1": "Tableaux de bord interactifs",
+"S2_F2": "Alertes intelligentes",
+"S2_F3": "Suivi en temps réel",
+"S3_F1": "Rapports CO₂ et économiques",
+"S3_F2": "Benchmarking par site",
+"S3_F3": "Recommandations RSE",
+"NOTE": "* Le détail de chaque service s'ouvre dans une section dédiée ci-dessous"
   },
 
   "PRODUCTS": {

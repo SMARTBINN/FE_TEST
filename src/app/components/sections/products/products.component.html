@@ -1,1 +1,99 @@
-<p>products works!</p>
+<section id="produits" class="py-28 bg-green-50/50 relative overflow-hidden">
+
+  <div class="absolute top-0 right-0 w-96 h-96 bg-green-100 rounded-full blur-3xl opacity-30 -z-10"></div>
+  <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-30 -z-10"></div>
+
+  <div class="container mx-auto px-4 md:px-6">
+
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-100 text-green-700 text-sm font-semibold mb-5 uppercase tracking-wide">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+        {{ 'PRODUCTS.TITLE' | translate }}
+      </div>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-5">
+        {{ 'PRODUCTS.TITLE' | translate }}
+      </h2>
+      <p class="text-gray-500 max-w-xl mx-auto text-lg">
+        {{ 'PRODUCTS.SUBTITLE' | translate }}
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+
+      <!-- Waste Loop -->
+      <div class="product-card bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+
+        <!-- Image area -->
+        <div class="relative bg-green-50 h-56 flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-green-50"></div>
+          <svg class="h-24 w-24 text-green-400 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
+          </svg>
+          <div class="absolute bottom-3 right-3 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-green-700">
+            IoT Sensor
+          </div>
+          <!-- Animated ring -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-32 h-32 rounded-full border-2 border-green-300 opacity-40 animate-ping" style="animation-duration:3s"></div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="p-8 flex flex-col flex-grow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-green-100 p-2.5 rounded-xl">
+              <svg class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900">{{ 'PRODUCTS.P1_TITLE' | translate }}</h3>
+          </div>
+
+          <p class="text-gray-500 leading-relaxed flex-grow mb-6">{{ 'PRODUCTS.P1_DESC' | translate }}</p>
+
+          <button class="w-full bg-green-600 text-white py-3.5 rounded-full font-semibold hover:bg-green-700 transition-colors">
+            {{ 'PRODUCTS.P1_CTA' | translate }}
+          </button>
+          <p class="text-center text-xs text-gray-400 mt-2">{{ 'PRODUCTS.P1_NOTE' | translate }}</p>
+        </div>
+      </div>
+
+      <!-- Waste Link -->
+      <div class="product-card bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+
+        <!-- Image area -->
+        <div class="relative bg-blue-50 h-56 flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-blue-50"></div>
+          <svg class="h-24 w-24 text-blue-400 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+          </svg>
+          <div class="absolute bottom-3 right-3 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-blue-700">
+            App Interface
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="p-8 flex flex-col flex-grow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-blue-100 p-2.5 rounded-xl">
+              <svg class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900">{{ 'PRODUCTS.P2_TITLE' | translate }}</h3>
+          </div>
+
+          <p class="text-gray-500 leading-relaxed flex-grow mb-6">{{ 'PRODUCTS.P2_DESC' | translate }}</p>
+
+          <button class="w-full border-2 border-green-600 text-green-600 py-3.5 rounded-full font-semibold hover:bg-green-50 transition-colors">
+            {{ 'PRODUCTS.P2_CTA' | translate }}
+          </button>
+          <p class="text-center text-xs text-gray-400 mt-2">{{ 'PRODUCTS.P2_NOTE' | translate }}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
