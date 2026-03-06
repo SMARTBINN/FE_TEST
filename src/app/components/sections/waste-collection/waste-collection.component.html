@@ -1,1 +1,98 @@
-<p>waste-collection works!</p>
+<section id="collecte" class="py-24 bg-white">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Text -->
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm font-semibold mb-6">
+          <svg class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+          </svg>
+          {{ 'WASTE.BADGE' | translate }}
+        </div>
+
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{{ 'WASTE.TITLE' | translate }}</h2>
+        <p class="text-lg text-gray-600 mb-8">{{ 'WASTE.SUBTITLE' | translate }}</p>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex gap-3">
+            <svg class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <p class="text-gray-700">{{ 'WASTE.F1' | translate }}</p>
+          </div>
+          <div class="flex gap-3">
+            <svg class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <p class="text-gray-700">{{ 'WASTE.F2' | translate }}</p>
+          </div>
+          <div class="flex gap-3">
+            <svg class="h-6 w-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <p class="text-gray-700">{{ 'WASTE.F3' | translate }}</p>
+          </div>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-2xl border border-green-100">
+          <h4 class="font-bold text-green-900 mb-4">{{ 'WASTE.GAINS_TITLE' | translate }}</h4>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-green-800">
+              <div class="h-2 w-2 rounded-full bg-green-500"></div>
+              {{ 'WASTE.G1' | translate }}
+            </li>
+            <li class="flex items-center gap-2 text-green-800">
+              <div class="h-2 w-2 rounded-full bg-green-500"></div>
+              {{ 'WASTE.G2' | translate }}
+            </li>
+            <li class="flex items-center gap-2 text-green-800">
+              <div class="h-2 w-2 rounded-full bg-green-500"></div>
+              {{ 'WASTE.G3' | translate }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="relative">
+        <div class="absolute inset-0 bg-green-100 rounded-full opacity-30 blur-3xl"></div>
+        <div class="relative bg-white rounded-3xl shadow-xl p-8 flex flex-col items-center border border-gray-100">
+
+          <div class="w-40 h-40 bg-green-50 rounded-full flex items-center justify-center mb-6 relative">
+            <div class="absolute inset-0 border-4 border-green-200 rounded-full border-t-green-500 animate-spin" style="animation-duration:8s"></div>
+            <svg class="h-16 w-16 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+          </div>
+
+          <h3 class="text-xl font-bold text-gray-900 mb-1">{{ 'WASTE.BIN_TITLE' | translate }}</h3>
+          <p class="text-gray-400 text-sm mb-8">{{ 'WASTE.BIN_SUBTITLE' | translate }}</p>
+
+          <div class="w-full space-y-5">
+            <div>
+              <div class="flex justify-between text-sm mb-2">
+                <span class="text-gray-600 font-medium">{{ 'WASTE.FILL' | translate }}</span>
+                <span class="font-bold text-green-600">85%</span>
+              </div>
+              <div class="h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-green-400 to-green-600 rounded-full" style="width:85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-2">
+                <span class="text-gray-600 font-medium">{{ 'WASTE.BATTERY' | translate }}</span>
+                <span class="font-bold text-green-600">92%</span>
+              </div>
+              <div class="h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-green-400 to-green-600 rounded-full" style="width:92%"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

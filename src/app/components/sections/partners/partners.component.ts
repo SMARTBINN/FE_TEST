@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-partners',
-  imports: [],
+  standalone: true,
+  imports: [TranslateModule],
   templateUrl: './partners.component.html',
   styleUrl: './partners.component.css'
 })
-export class PartnersComponent {
-
-}
+export class PartnersComponent {}

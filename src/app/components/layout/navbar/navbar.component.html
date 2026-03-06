@@ -22,13 +22,52 @@
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-8">
-        <a
-          *ngFor="let link of navLinks"
-          [href]="link.href"
-          class="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
-        >
-          {{ link.key | translate }}
+
+        <a href="#home" class="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
+          {{ 'NAV.HOME' | translate }}
         </a>
+
+        <a href="#services" class="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
+          {{ 'NAV.SERVICES' | translate }}
+        </a>
+
+        <!-- Dropdown Qui sommes-nous -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
+            {{ 'NAV.ABOUT' | translate }}
+            <svg class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <div class="absolute top-full left-0 mt-3 w-52 bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden">
+            <a href="#valeurs"
+              class="flex items-center gap-3 px-5 py-3.5 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
+                <svg class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </div>
+              {{ 'NAV.VALUES' | translate }}
+            </a>
+            <div class="h-px bg-gray-100 mx-4"></div>
+            <a href="#team"
+              class="flex items-center gap-3 px-5 py-3.5 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors">
+              <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
+                <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              {{ 'NAV.TEAM' | translate }}
+            </a>
+          </div>
+        </div>
+
+        <a href="#produits" class="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
+          {{ 'NAV.PRODUCTS' | translate }}
+        </a>
+
       </nav>
 
       <!-- CTA + Language Toggle -->
@@ -81,21 +120,47 @@
   <div
     *ngIf="isMobileMenuOpen"
     class="md:hidden absolute top-full left-0 right-0 bg-white border-b
-           border-gray-100 shadow-lg p-4 flex flex-col gap-4"
+           border-gray-100 shadow-lg p-4 flex flex-col gap-2"
   >
-    <a
-      *ngFor="let link of navLinks"
-      [href]="link.href"
-      class="text-base font-medium text-gray-700 py-2 border-b border-gray-50"
-      (click)="closeMobileMenu()"
-    >
-      {{ link.key | translate }}
+    <a href="#home"
+      class="text-base font-medium text-gray-700 py-2.5 px-3 rounded-xl hover:bg-green-50 hover:text-green-600 transition-colors"
+      (click)="closeMobileMenu()">
+      {{ 'NAV.HOME' | translate }}
     </a>
+
+    <a href="#services"
+      class="text-base font-medium text-gray-700 py-2.5 px-3 rounded-xl hover:bg-green-50 hover:text-green-600 transition-colors"
+      (click)="closeMobileMenu()">
+      {{ 'NAV.SERVICES' | translate }}
+    </a>
+
+    <!-- Mobile dropdown expanded -->
+    <div class="py-1">
+      <p class="text-xs font-bold text-gray-400 uppercase tracking-widest px-3 mb-2">{{ 'NAV.ABOUT' | translate }}</p>
+      <a href="#valeurs"
+        class="flex items-center gap-2 text-base font-medium text-gray-700 py-2 px-3 rounded-xl hover:bg-green-50 hover:text-green-600 transition-colors"
+        (click)="closeMobileMenu()">
+        ❤️ {{ 'NAV.VALUES' | translate }}
+      </a>
+      <a href="#team"
+        class="flex items-center gap-2 text-base font-medium text-gray-700 py-2 px-3 rounded-xl hover:bg-green-50 hover:text-green-600 transition-colors"
+        (click)="closeMobileMenu()">
+        👥 {{ 'NAV.TEAM' | translate }}
+      </a>
+    </div>
+
+    <a href="#produits"
+      class="text-base font-medium text-gray-700 py-2.5 px-3 rounded-xl hover:bg-green-50 hover:text-green-600 transition-colors"
+      (click)="closeMobileMenu()">
+      {{ 'NAV.PRODUCTS' | translate }}
+    </a>
+
+    <div class="h-px bg-gray-100 my-1"></div>
 
     <!-- Language toggle mobile -->
     <button
       (click)="languageService.toggleLanguage(); closeMobileMenu()"
-      class="w-full flex items-center justify-center gap-2 py-2 border border-gray-200
+      class="w-full flex items-center justify-center gap-2 py-2.5 border border-gray-200
              rounded-full text-sm font-medium text-gray-600 hover:border-green-400
              hover:text-green-600 transition-colors"
     >
@@ -107,7 +172,7 @@
     </button>
 
     <button
-      class="w-full mt-1 inline-flex items-center justify-center px-4 py-2 text-sm
+      class="w-full mt-1 inline-flex items-center justify-center px-4 py-2.5 text-sm
              font-medium rounded-full bg-green-600 text-white hover:bg-green-700
              transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
     >

@@ -1,1 +1,93 @@
-<p>analyse works!</p>
+<section id="analyse" class="py-24 bg-white">
+  <div class="container mx-auto px-4 md:px-6">
+
+    <!-- Header -->
+    <div class="max-w-3xl mx-auto text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-100 text-purple-700 text-sm font-semibold mb-6">
+        {{ 'ANALYSE.BADGE' | translate }}
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{{ 'ANALYSE.TITLE' | translate }}</h2>
+      <p class="text-lg text-gray-600">{{ 'ANALYSE.SUBTITLE' | translate }}</p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+
+      <div class="bg-purple-50 rounded-2xl p-8 border border-purple-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <div class="bg-white w-12 h-12 rounded-xl flex items-center justify-center shadow-sm mb-6">
+          <svg class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ 'ANALYSE.C1_TITLE' | translate }}</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">{{ 'ANALYSE.C1_DESC' | translate }}</p>
+      </div>
+
+      <div class="bg-purple-50 rounded-2xl p-8 border border-purple-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <div class="bg-white w-12 h-12 rounded-xl flex items-center justify-center shadow-sm mb-6">
+          <svg class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ 'ANALYSE.C2_TITLE' | translate }}</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">{{ 'ANALYSE.C2_DESC' | translate }}</p>
+      </div>
+
+      <div class="bg-purple-50 rounded-2xl p-8 border border-purple-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <div class="bg-white w-12 h-12 rounded-xl flex items-center justify-center shadow-sm mb-6">
+          <svg class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">{{ 'ANALYSE.C3_TITLE' | translate }}</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">{{ 'ANALYSE.C3_DESC' | translate }}</p>
+      </div>
+
+    </div>
+
+    <!-- Dark banner -->
+    <div class="bg-gray-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-purple-600 rounded-full blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-600 rounded-full blur-3xl opacity-20 translate-y-1/2 -translate-x-1/2"></div>
+
+      <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold mb-6">{{ 'ANALYSE.BENEFITS_TITLE' | translate }}</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <div class="mt-1 h-5 w-5 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                <div class="h-2 w-2 rounded-full bg-purple-400"></div>
+              </div>
+              <span class="text-gray-300">{{ 'ANALYSE.B1' | translate }}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="mt-1 h-5 w-5 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                <div class="h-2 w-2 rounded-full bg-purple-400"></div>
+              </div>
+              <span class="text-gray-300">{{ 'ANALYSE.B2' | translate }}</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="mt-1 h-5 w-5 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                <div class="h-2 w-2 rounded-full bg-purple-400"></div>
+              </div>
+              <span class="text-gray-300">{{ 'ANALYSE.B3' | translate }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-center">
+          <div class="inline-block bg-white/10 rounded-2xl p-8 border border-white/10 mb-8">
+            <div class="text-5xl font-black text-purple-400 mb-2">{{ 'ANALYSE.STAT' | translate }}</div>
+            <div class="text-sm text-gray-300">{{ 'ANALYSE.STAT_DESC' | translate }}</div>
+          </div>
+          <br>
+          <button class="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+            {{ 'ANALYSE.AUDIT_BTN' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

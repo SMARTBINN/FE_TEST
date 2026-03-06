@@ -3,12 +3,10 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-monitoring',
+  selector: 'app-team',
   standalone: true,
   imports: [CommonModule, TranslateModule],
-  templateUrl: './monitoring.component.html',
-  styleUrl: './monitoring.component.css'
+  templateUrl: './team.component.html',
+  styleUrl: './team.component.css'
 })
-export class MonitoringComponent {
-  bars = [40, 65, 30, 80, 55, 90, 45];
-}
+export class TeamComponent {}

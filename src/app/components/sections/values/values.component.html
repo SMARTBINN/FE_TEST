@@ -1,1 +1,51 @@
-<p>values works!</p>
+<section id="valeurs" class="py-24 bg-white">
+  <div class="container mx-auto px-4 md:px-6">
+
+    <!-- Header -->
+    <div class="text-center mb-16 max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{{ 'VALUES.TITLE' | translate }}</h2>
+      <p class="text-lg text-gray-600">{{ 'VALUES.SUBTITLE' | translate }}</p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+      <!-- Propreté -->
+      <div class="group relative overflow-hidden rounded-2xl bg-gray-50 p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-bl-full opacity-30 transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
+        <div class="inline-flex p-4 rounded-2xl bg-blue-500 shadow-lg mb-6">
+          <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ 'VALUES.V1_TITLE' | translate }}</h3>
+        <p class="text-gray-600">{{ 'VALUES.V1_DESC' | translate }}</p>
+      </div>
+
+      <!-- Durabilité -->
+      <div class="group relative overflow-hidden rounded-2xl bg-gray-50 p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-green-100 rounded-bl-full opacity-30 transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
+        <div class="inline-flex p-4 rounded-2xl bg-green-500 shadow-lg mb-6">
+          <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ 'VALUES.V2_TITLE' | translate }}</h3>
+        <p class="text-gray-600">{{ 'VALUES.V2_DESC' | translate }}</p>
+      </div>
+
+      <!-- Solidarité -->
+      <div class="group relative overflow-hidden rounded-2xl bg-gray-50 p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-red-100 rounded-bl-full opacity-30 transform translate-x-8 -translate-y-8 group-hover:scale-150 transition-transform duration-500"></div>
+        <div class="inline-flex p-4 rounded-2xl bg-red-500 shadow-lg mb-6">
+          <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ 'VALUES.V3_TITLE' | translate }}</h3>
+        <p class="text-gray-600">{{ 'VALUES.V3_DESC' | translate }}</p>
+      </div>
+
+    </div>
+  </div>
+</section>

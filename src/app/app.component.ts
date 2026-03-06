@@ -11,14 +11,15 @@ import { StatsComponent } from './components/sections/stats/stats.component';
 import { ValuesComponent } from './components/sections/values/values.component';
 import { PartnersComponent } from './components/sections/partners/partners.component';
 import { ContactComponent } from './components/sections/contact/contact.component';
-
+import { TeamComponent } from './components/sections/team/team.component';
+import { FooterComponent } from './components/sections/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     TranslateModule, NavbarComponent, HeroComponent, ServicesComponent,
     ProductsComponent, WasteCollectionComponent, MonitoringComponent,
-    AnalyseComponent, StatsComponent, ValuesComponent, PartnersComponent, ContactComponent,
+    AnalyseComponent, StatsComponent, ValuesComponent, PartnersComponent, ContactComponent,TeamComponent,FooterComponent
   ],
   templateUrl: './app.component.html',
 })
