@@ -1,0 +1,109 @@
+<div *ngIf="visible" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+  (click)="close.emit()">
+
+  <div class="bg-white rounded-3xl shadow-2xl w-full max-w-lg relative overflow-hidden"
+    (click)="$event.stopPropagation()">
+
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-green-600 to-green-500 px-8 py-6">
+      <button class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+        (click)="close.emit()">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <h2 class="text-2xl font-bold text-white">{{ 'APPOINTMENT.TITLE' | translate }}</h2>
+      <p class="text-green-100 text-sm mt-1">{{ 'APPOINTMENT.SUBTITLE' | translate }}</p>
+    </div>
+
+    <!-- Success -->
+    <div *ngIf="success" class="p-8 flex flex-col items-center text-center">
+      <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 mb-2">{{ 'APPOINTMENT.SUCCESS_TITLE' | translate }}</h3>
+      <p class="text-gray-500">{{ 'APPOINTMENT.SUCCESS_DESC' | translate }}</p>
+    </div>
+
+    <!-- Form -->
+    <form *ngIf="!success" (ngSubmit)="submit()" class="p-8 grid gap-5">
+
+      <!-- Error banner -->
+      <div *ngIf="error" class="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-xl">
+        {{ 'APPOINTMENT.ERROR_SEND' | translate }}
+      </div>
+
+      <!-- Name -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1.5">
+          {{ 'APPOINTMENT.NAME' | translate }} <span class="text-red-500">*</span>
+        </label>
+        <input type="text" name="name" [(ngModel)]="appointment.name"
+          class="w-full px-4 py-3 rounded-xl border text-sm outline-none transition-all focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          [class.border-red-400]="submitted && !appointment.name"
+          [class.border-gray-200]="!(submitted && !appointment.name)"/>
+        <p *ngIf="submitted && !appointment.name" class="text-red-500 text-xs mt-1">{{ 'APPOINTMENT.ERROR_NAME' | translate }}</p>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1.5">
+          {{ 'APPOINTMENT.EMAIL' | translate }} <span class="text-red-500">*</span>
+        </label>
+        <input type="email" name="email" [(ngModel)]="appointment.email"
+          class="w-full px-4 py-3 rounded-xl border text-sm outline-none transition-all focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          [class.border-red-400]="submitted && (!appointment.email || !isValidEmail())"
+          [class.border-gray-200]="!(submitted && (!appointment.email || !isValidEmail()))"/>
+        <p *ngIf="submitted && !appointment.email" class="text-red-500 text-xs mt-1">{{ 'APPOINTMENT.ERROR_EMAIL' | translate }}</p>
+        <p *ngIf="submitted && appointment.email && !isValidEmail()" class="text-red-500 text-xs mt-1">{{ 'APPOINTMENT.ERROR_EMAIL_FORMAT' | translate }}</p>
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1.5">
+          {{ 'APPOINTMENT.PHONE' | translate }} <span class="text-red-500">*</span>
+        </label>
+        <input type="tel" name="phone" [(ngModel)]="appointment.phone"
+          class="w-full px-4 py-3 rounded-xl border text-sm outline-none transition-all focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          [class.border-red-400]="submitted && !appointment.phone"
+          [class.border-gray-200]="!(submitted && !appointment.phone)"/>
+        <p *ngIf="submitted && !appointment.phone" class="text-red-500 text-xs mt-1">{{ 'APPOINTMENT.ERROR_PHONE' | translate }}</p>
+      </div>
+
+      <!-- Date -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1.5">
+          {{ 'APPOINTMENT.DATE' | translate }} <span class="text-red-500">*</span>
+        </label>
+        <input type="date" name="date" [(ngModel)]="appointment.date"
+          class="w-full px-4 py-3 rounded-xl border text-sm outline-none transition-all focus:ring-2 focus:ring-green-500 focus:border-transparent"
+          [class.border-red-400]="submitted && (!appointment.date || !isFutureDate())"
+          [class.border-gray-200]="!(submitted && (!appointment.date || !isFutureDate()))"/>
+        <p *ngIf="submitted && !appointment.date" class="text-red-500 text-xs mt-1">{{ 'APPOINTMENT.ERROR_DATE_REQUIRED' | translate }}</p>
+        <p *ngIf="submitted && appointment.date && !isFutureDate()" class="text-red-500 text-xs mt-1">{{ 'APPOINTMENT.ERROR_DATE_FUTURE' | translate }}</p>
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1.5">
+          {{ 'APPOINTMENT.MESSAGE' | translate }}
+        </label>
+        <textarea name="message" [(ngModel)]="appointment.message" rows="3"
+          class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm outline-none transition-all focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" [disabled]="loading"
+        class="w-full bg-green-600 text-white py-3.5 rounded-xl font-semibold hover:bg-green-700 transition-colors disabled:opacity-60 flex items-center justify-center gap-2">
+        <svg *ngIf="loading" class="h-5 w-5 animate-spin" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+        </svg>
+        {{ loading ? ('APPOINTMENT.SENDING' | translate) : ('APPOINTMENT.SUBMIT' | translate) }}
+      </button>
+
+    </form>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 <header
   [ngClass]="{
-    'bg-white/90 backdrop-blur-md shadow-sm py-3': isScrolled,
+    'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm py-3': isScrolled,
     'bg-transparent py-5': !isScrolled
   }"
   class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
@@ -17,33 +17,32 @@
               d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
           </svg>
         </div>
-        <span class="text-xl font-bold text-gray-900 tracking-tight">BIOLOOP</span>
+        <span class="text-xl font-bold text-gray-900 dark:text-white tracking-tight">BIOLOOP</span>
       </a>
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-8">
 
-        <a href="#home" class="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
+        <a href="#home" class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-green-600 transition-colors">
           {{ 'NAV.HOME' | translate }}
         </a>
 
-        <a href="#services" class="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
+        <a href="#services" class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-green-600 transition-colors">
           {{ 'NAV.SERVICES' | translate }}
         </a>
 
         <!-- Dropdown Qui sommes-nous -->
         <div class="relative group">
-          <button class="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
+          <button class="flex items-center gap-1 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-green-600 transition-colors">
             {{ 'NAV.ABOUT' | translate }}
             <svg class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
           </button>
 
-          <!-- Dropdown -->
-          <div class="absolute top-full left-0 mt-3 w-52 bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden">
+          <div class="absolute top-full left-0 mt-3 w-52 bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden">
             <a href="#valeurs"
-              class="flex items-center gap-3 px-5 py-3.5 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors">
+              class="flex items-center gap-3 px-5 py-3.5 text-sm text-gray-700 dark:text-gray-200 hover:text-green-600 hover:bg-green-50 dark:hover:bg-gray-700 transition-colors">
               <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center flex-shrink-0">
                 <svg class="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
@@ -51,35 +50,48 @@
               </div>
               {{ 'NAV.VALUES' | translate }}
             </a>
-            <div class="h-px bg-gray-100 mx-4"></div>
-            <a href="#team"
-              class="flex items-center gap-3 px-5 py-3.5 text-sm text-gray-700 hover:text-green-600 hover:bg-green-50 transition-colors">
+            <div class="h-px bg-gray-100 dark:bg-gray-700 mx-4"></div>
+            <button (click)="showTeamModal = true"
+              class="w-full flex items-center gap-3 px-5 py-3.5 text-sm text-gray-700 dark:text-gray-200 hover:text-green-600 hover:bg-green-50 dark:hover:bg-gray-700 transition-colors">
               <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
                 <svg class="h-4 w-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
                 </svg>
               </div>
               {{ 'NAV.TEAM' | translate }}
-            </a>
+            </button>
           </div>
         </div>
 
-        <a href="#produits" class="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
+        <a href="#produits" class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-green-600 transition-colors">
           {{ 'NAV.PRODUCTS' | translate }}
         </a>
 
       </nav>
 
-      <!-- CTA + Language Toggle -->
+      <!-- CTA + Language Toggle + Dark Mode -->
       <div class="hidden md:flex items-center gap-3">
 
+        <!-- Dark Mode Toggle -->
+        <button (click)="toggleDark()"
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-200 dark:border-gray-600
+                 text-sm font-medium text-gray-600 dark:text-gray-300 hover:border-green-400 hover:text-green-600
+                 transition-colors">
+          <svg *ngIf="!isDark" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+          <svg *ngIf="isDark" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+          </svg>
+        </button>
+
         <!-- Language Toggle -->
-        <button
-          (click)="languageService.toggleLanguage()"
-          class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-200
-                 text-sm font-medium text-gray-600 hover:border-green-400 hover:text-green-600
-                 transition-colors"
-        >
+        <button (click)="languageService.toggleLanguage()"
+          class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-200 dark:border-gray-600
+                 text-sm font-medium text-gray-600 dark:text-gray-300 hover:border-green-400 hover:text-green-600
+                 transition-colors">
           <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
@@ -88,27 +100,20 @@
         </button>
 
         <!-- CTA -->
-        <button
+        <button (click)="openDemo()"
           class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium
                  rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors
-                 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-        >
+                 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
           {{ 'NAV.CTA' | translate }}
         </button>
       </div>
 
       <!-- Mobile Toggle -->
-      <button
-        class="md:hidden p-2 text-gray-600"
-        (click)="toggleMobileMenu()"
-        aria-label="Toggle menu"
-      >
-        <svg *ngIf="isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <button class="md:hidden p-2 text-gray-600 dark:text-gray-300" (click)="toggleMobileMenu()" aria-label="Toggle menu">
+        <svg *ngIf="isMobileMenuOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
-        <svg *ngIf="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg *ngIf="!isMobileMenuOpen" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
@@ -117,53 +122,45 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div
-    *ngIf="isMobileMenuOpen"
-    class="md:hidden absolute top-full left-0 right-0 bg-white border-b
-           border-gray-100 shadow-lg p-4 flex flex-col gap-2"
-  >
-    <a href="#home"
-      class="text-base font-medium text-gray-700 py-2.5 px-3 rounded-xl hover:bg-green-50 hover:text-green-600 transition-colors"
-      (click)="closeMobileMenu()">
-      {{ 'NAV.HOME' | translate }}
-    </a>
+  <div *ngIf="isMobileMenuOpen"
+    class="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-700 shadow-lg p-4 flex flex-col gap-2">
 
-    <a href="#services"
-      class="text-base font-medium text-gray-700 py-2.5 px-3 rounded-xl hover:bg-green-50 hover:text-green-600 transition-colors"
-      (click)="closeMobileMenu()">
-      {{ 'NAV.SERVICES' | translate }}
-    </a>
+    <a href="#home" class="text-base font-medium text-gray-700 dark:text-gray-200 py-2.5 px-3 rounded-xl hover:bg-green-50 dark:hover:bg-gray-800 hover:text-green-600 transition-colors"
+      (click)="closeMobileMenu()">{{ 'NAV.HOME' | translate }}</a>
 
-    <!-- Mobile dropdown expanded -->
+    <a href="#services" class="text-base font-medium text-gray-700 dark:text-gray-200 py-2.5 px-3 rounded-xl hover:bg-green-50 dark:hover:bg-gray-800 hover:text-green-600 transition-colors"
+      (click)="closeMobileMenu()">{{ 'NAV.SERVICES' | translate }}</a>
+
     <div class="py-1">
       <p class="text-xs font-bold text-gray-400 uppercase tracking-widest px-3 mb-2">{{ 'NAV.ABOUT' | translate }}</p>
-      <a href="#valeurs"
-        class="flex items-center gap-2 text-base font-medium text-gray-700 py-2 px-3 rounded-xl hover:bg-green-50 hover:text-green-600 transition-colors"
-        (click)="closeMobileMenu()">
-        ❤️ {{ 'NAV.VALUES' | translate }}
-      </a>
-      <a href="#team"
-        class="flex items-center gap-2 text-base font-medium text-gray-700 py-2 px-3 rounded-xl hover:bg-green-50 hover:text-green-600 transition-colors"
-        (click)="closeMobileMenu()">
+      <a href="#valeurs" class="flex items-center gap-2 text-base font-medium text-gray-700 dark:text-gray-200 py-2 px-3 rounded-xl hover:bg-green-50 dark:hover:bg-gray-800 hover:text-green-600 transition-colors"
+        (click)="closeMobileMenu()">❤️ {{ 'NAV.VALUES' | translate }}</a>
+      <button (click)="showTeamModal = true; closeMobileMenu()"
+        class="w-full text-left flex items-center gap-2 text-base font-medium text-gray-700 dark:text-gray-200 py-2 px-3 rounded-xl hover:bg-green-50 dark:hover:bg-gray-800 hover:text-green-600 transition-colors">
         👥 {{ 'NAV.TEAM' | translate }}
-      </a>
+      </button>
     </div>
 
-    <a href="#produits"
-      class="text-base font-medium text-gray-700 py-2.5 px-3 rounded-xl hover:bg-green-50 hover:text-green-600 transition-colors"
-      (click)="closeMobileMenu()">
-      {{ 'NAV.PRODUCTS' | translate }}
-    </a>
+    <a href="#produits" class="text-base font-medium text-gray-700 dark:text-gray-200 py-2.5 px-3 rounded-xl hover:bg-green-50 dark:hover:bg-gray-800 hover:text-green-600 transition-colors"
+      (click)="closeMobileMenu()">{{ 'NAV.PRODUCTS' | translate }}</a>
 
-    <div class="h-px bg-gray-100 my-1"></div>
+    <div class="h-px bg-gray-100 dark:bg-gray-700 my-1"></div>
 
-    <!-- Language toggle mobile -->
-    <button
-      (click)="languageService.toggleLanguage(); closeMobileMenu()"
-      class="w-full flex items-center justify-center gap-2 py-2.5 border border-gray-200
-             rounded-full text-sm font-medium text-gray-600 hover:border-green-400
-             hover:text-green-600 transition-colors"
-    >
+    <button (click)="toggleDark()"
+      class="w-full flex items-center justify-center gap-2 py-2.5 border border-gray-200 dark:border-gray-600 rounded-full text-sm font-medium text-gray-600 dark:text-gray-300 hover:border-green-400 hover:text-green-600 transition-colors">
+      <svg *ngIf="!isDark" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+      </svg>
+      <svg *ngIf="isDark" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+      </svg>
+      {{ isDark ? 'Mode Clair' : 'Mode Sombre' }}
+    </button>
+
+    <button (click)="languageService.toggleLanguage(); closeMobileMenu()"
+      class="w-full flex items-center justify-center gap-2 py-2.5 border border-gray-200 dark:border-gray-600 rounded-full text-sm font-medium text-gray-600 dark:text-gray-300 hover:border-green-400 hover:text-green-600 transition-colors">
       <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/>
@@ -171,12 +168,123 @@
       {{ languageService.currentLang() === 'fr' ? 'عربي' : 'FR' }}
     </button>
 
-    <button
-      class="w-full mt-1 inline-flex items-center justify-center px-4 py-2.5 text-sm
-             font-medium rounded-full bg-green-600 text-white hover:bg-green-700
-             transition-colors focus:outline-none focus:ring-2 focus:ring-green-500"
-    >
+    <button (click)="openDemo(); closeMobileMenu()"
+      class="w-full mt-1 inline-flex items-center justify-center px-4 py-2.5 text-sm font-medium rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors">
       {{ 'NAV.CTA' | translate }}
     </button>
   </div>
+
 </header>
+
+<!-- ===== TEAM MODAL ===== -->
+<div *ngIf="showTeamModal"
+  class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4"
+  (click)="showTeamModal = false">
+  <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl w-full max-w-4xl max-h-[85vh] overflow-y-auto"
+    (click)="$event.stopPropagation()">
+
+    <div class="sticky top-0 bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 px-8 py-5 flex items-center justify-between rounded-t-3xl z-10">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white">{{ 'TEAM.TITLE' | translate }}</h2>
+      <button (click)="showTeamModal = false" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+        <svg class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="p-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div *ngFor="let member of teamMembers"
+        class="flex flex-col items-center text-center p-6 rounded-2xl border border-gray-100 dark:border-gray-700 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+        <div class="relative mb-4">
+          <img [src]="member.photo" [alt]="member.name" class="w-20 h-20 rounded-full object-cover border-4 border-green-100 shadow"/>
+          <div class="absolute bottom-0 right-0 w-5 h-5 bg-green-500 rounded-full border-2 border-white"></div>
+        </div>
+        <h3 class="font-bold text-gray-900 dark:text-white">{{ member.name }}</h3>
+        <p class="text-green-600 text-sm font-medium mb-3">{{ member.role }}</p>
+        <a [href]="member.linkedin" target="_blank" class="text-blue-500 text-xs hover:underline">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== DEMO MODAL ===== -->
+<div *ngIf="showDemoModal"
+  class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4"
+  (click)="showDemoModal = false">
+  <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden"
+    (click)="$event.stopPropagation()">
+
+    <div class="bg-gradient-to-r from-green-600 to-green-500 px-8 py-6 relative">
+      <button (click)="showDemoModal = false" class="absolute top-4 right-4 text-white/80 hover:text-white transition-colors">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <h2 class="text-2xl font-bold text-white">{{ 'APPOINTMENT.TITLE' | translate }}</h2>
+      <p class="text-green-100 text-sm mt-1">{{ 'APPOINTMENT.SUBTITLE' | translate }}</p>
+    </div>
+
+    <div *ngIf="success" class="p-8 flex flex-col items-center text-center">
+      <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">{{ 'APPOINTMENT.SUCCESS_TITLE' | translate }}</h3>
+      <p class="text-gray-500">{{ 'APPOINTMENT.SUCCESS_DESC' | translate }}</p>
+    </div>
+
+    <form *ngIf="!success" (ngSubmit)="submitDemo()" class="p-8 grid gap-4">
+      <div *ngIf="error" class="bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-xl">
+        {{ 'APPOINTMENT.ERROR_SEND' | translate }}
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">{{ 'APPOINTMENT.NAME' | translate }} <span class="text-red-500">*</span></label>
+        <input type="text" name="name" [(ngModel)]="appointment.name"
+          class="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+          [class.border-red-400]="submitted && !appointment.name"
+          [class.border-gray-200]="!(submitted && !appointment.name)"/>
+        <p *ngIf="submitted && !appointment.name" class="text-red-500 text-xs mt-1">{{ 'APPOINTMENT.ERROR_NAME' | translate }}</p>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">{{ 'APPOINTMENT.EMAIL' | translate }} <span class="text-red-500">*</span></label>
+        <input type="email" name="email" [(ngModel)]="appointment.email"
+          class="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+          [class.border-red-400]="submitted && (!appointment.email || !isValidEmail())"
+          [class.border-gray-200]="!(submitted && (!appointment.email || !isValidEmail()))"/>
+        <p *ngIf="submitted && !appointment.email" class="text-red-500 text-xs mt-1">{{ 'APPOINTMENT.ERROR_EMAIL' | translate }}</p>
+        <p *ngIf="submitted && appointment.email && !isValidEmail()" class="text-red-500 text-xs mt-1">{{ 'APPOINTMENT.ERROR_EMAIL_FORMAT' | translate }}</p>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">{{ 'APPOINTMENT.PHONE' | translate }} <span class="text-red-500">*</span></label>
+        <input type="tel" name="phone" [(ngModel)]="appointment.phone"
+          class="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+          [class.border-red-400]="submitted && !appointment.phone"
+          [class.border-gray-200]="!(submitted && !appointment.phone)"/>
+        <p *ngIf="submitted && !appointment.phone" class="text-red-500 text-xs mt-1">{{ 'APPOINTMENT.ERROR_PHONE' | translate }}</p>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">{{ 'APPOINTMENT.DATE' | translate }} <span class="text-red-500">*</span></label>
+        <input type="date" name="date" [(ngModel)]="appointment.date"
+          class="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+          [class.border-red-400]="submitted && (!appointment.date || !isFutureDate())"
+          [class.border-gray-200]="!(submitted && (!appointment.date || !isFutureDate()))"/>
+        <p *ngIf="submitted && !appointment.date" class="text-red-500 text-xs mt-1">{{ 'APPOINTMENT.ERROR_DATE_REQUIRED' | translate }}</p>
+        <p *ngIf="submitted && appointment.date && !isFutureDate()" class="text-red-500 text-xs mt-1">{{ 'APPOINTMENT.ERROR_DATE_FUTURE' | translate }}</p>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">{{ 'APPOINTMENT.MESSAGE' | translate }}</label>
+        <textarea name="message" [(ngModel)]="appointment.message" rows="3"
+          class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none dark:bg-gray-700 dark:text-white"></textarea>
+      </div>
+      <button type="submit" [disabled]="loading"
+        class="w-full bg-green-600 text-white py-3.5 rounded-xl font-semibold hover:bg-green-700 transition-colors disabled:opacity-60 flex items-center justify-center gap-2">
+        <svg *ngIf="loading" class="h-5 w-5 animate-spin" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+        </svg>
+        {{ loading ? ('APPOINTMENT.SENDING' | translate) : ('APPOINTMENT.SUBMIT' | translate) }}
+      </button>
+    </form>
+  </div>
+</div>

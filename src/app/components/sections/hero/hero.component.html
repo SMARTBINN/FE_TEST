@@ -26,12 +26,13 @@
         <p class="text-lg text-gray-600 mb-7 max-w-lg">{{ 'HERO.SUBTITLE' | translate }}</p>
 
         <div class="flex flex-col sm:flex-row gap-4">
-          <button class="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center gap-2 group">
-            {{ 'HERO.BTN_PRIMARY' | translate }}
-            <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </button>
+<a routerLink="/login"
+  class="cursor-pointer bg-green-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-green-700 transition-colors flex items-center justify-center gap-2 group">
+  {{ 'HERO.BTN_PRIMARY' | translate }}
+  <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+  </svg>
+</a>
           <button class="border border-green-600 text-green-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-green-50 transition-colors">
             {{ 'HERO.BTN_SECONDARY' | translate }}
           </button>
@@ -41,7 +42,7 @@
       <!-- Illustration -->
       <div class="relative w-full" style="height: 520px;">
 
-        <!-- Wave SVG — مضبوط مع مواضع الأجهزة الجديدة -->
+        <!-- Wave SVG -->
         <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 520 520" preserveAspectRatio="none">
           <defs>
             <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -49,7 +50,7 @@
               <stop offset="100%" stop-color="#4ade80" stop-opacity="0.3"/>
             </linearGradient>
           </defs>
-          <!-- arc: السلة bottom≈350 (top:90+260), اللابتوب وسطه top≈220 (top:120+100) -->
+          <!-- -->
           <path d="M 105 350 C 190 220, 320 200, 415 220"
                 fill="none" stroke="#22c55e" stroke-width="1.5"
                 stroke-dasharray="6 4" opacity="0.2"/>
@@ -61,7 +62,7 @@
                 stroke-dasharray="14 250" stroke-dashoffset="0" opacity="0.5"/>
         </svg>
 
-        <!-- Badge IoT — أعلى يسار -->
+        <!-- Badge IoT -->
         <div class="float-badge absolute" style="top:20px; left:8px; animation-delay:0s; z-index:10;">
           <div class="bg-white border border-gray-100 rounded-2xl px-4 py-2.5 flex items-center gap-2.5"
                style="box-shadow:0 6px 28px rgba(0,0,0,0.09)">
@@ -78,7 +79,7 @@
           </div>
         </div>
 
-        <!-- Badge Temps Réel — وسط أعلى -->
+        <!-- Badge Temps Réel -->
         <div class="float-badge absolute" style="top:10px; left:50%; transform:translateX(-50%); animation-delay:0.7s; z-index:10;">
           <div class="bg-white border border-gray-100 rounded-2xl px-4 py-2.5 flex items-center gap-2.5"
                style="box-shadow:0 6px 28px rgba(0,0,0,0.09)">
@@ -95,7 +96,7 @@
           </div>
         </div>
 
-        <!-- Badge Dashboard — أعلى يمين -->
+        <!-- Badge Dashboard -->
         <div class="float-badge absolute" style="top:20px; right:4px; animation-delay:1.4s; z-index:10;">
           <div class="bg-white border border-gray-100 rounded-2xl px-4 py-2.5 flex items-center gap-2.5"
                style="box-shadow:0 6px 28px rgba(0,0,0,0.09)">
@@ -112,7 +113,7 @@
           </div>
         </div>
 
-        <!-- Badge IA — أسفل يمين، قريب من اللابتوب -->
+        <!-- Badge IA -->
         <div class="float-badge absolute" style="bottom:60px; right:4px; animation-delay:2.1s; z-index:10;">
           <div class="bg-white border border-purple-100 rounded-2xl px-4 py-2.5 flex items-center gap-2.5"
                style="box-shadow:0 6px 28px rgba(139,92,246,0.13)">
@@ -128,7 +129,7 @@
           </div>
         </div>
 
-        <!-- Smart Bin — يسار، top:90px (مرفوع) -->
+        <!-- Smart Bin -->
         <div class="absolute" style="left: 10px; top: 90px;">
           <div class="relative mb-3 flex items-center justify-center w-14 h-14 mx-auto">
             <div class="absolute w-14 h-14 rounded-full border-2 border-green-400 opacity-50 animate-ping"></div>
@@ -163,7 +164,7 @@
           </div>
         </div>
 
-        <!-- Laptop — يمين، top:120px (مرفوع) -->
+        <!-- Laptop -->
         <div class="absolute" style="right: 4px; top: 120px;">
           <div class="rounded-t-2xl overflow-hidden border-[5px] border-gray-800"
                style="width:300px; height:200px; background:#1e293b;">

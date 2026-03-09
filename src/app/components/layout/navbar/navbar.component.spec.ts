@@ -1,23 +1,98 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageService } from '../../../services/language.service';
+import emailjs from 'emailjs-com';
 
-import { NavbarComponent } from './navbar.component';
+@Component({
+  selector: 'app-navbar',
+  standalone: true,
+  imports: [CommonModule, RouterModule, TranslateModule, FormsModule],
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css'],
+})
+export class NavbarComponent {
+  isScrolled = false;
+  isMobileMenuOpen = false;
+  showTeamModal = false;
+  showDemoModal = false;
+  submitted = false;
+  success = false;
+  error = false;
+  loading = false;
 
-describe('NavbarComponent', () => {
-  let component: NavbarComponent;
-  let fixture: ComponentFixture<NavbarComponent>;
+  appointment = { name: '', email: '', phone: '', date: '', message: '' };
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [NavbarComponent]
-    })
-    .compileComponents();
+  teamMembers = [
+    { name: 'Zakaria Taskri',             role: 'CEO & Co-founder',             photo: 'assets/images/team/zakaria.jpeg',   linkedin: '#' },
+    { name: 'Badreddine Tirgani',         role: 'CTO & Co-founder',             photo: 'assets/images/team/badreddine.png', linkedin: '#' },
+    { name: 'Yassine Nait abdellah',      role: 'Electrical Engineer',          photo: 'assets/images/team/yassine.jpeg',   linkedin: '#' },
+    { name: 'Wiam En najih',              role: 'Quality Engineer',             photo: 'assets/images/team/wiam.jpeg',      linkedin: '#' },
+    { name: 'Fatine Joaouad',             role: 'Waste Management Consultant',  photo: 'assets/images/team/fatine.png',     linkedin: '#' },
+    { name: 'Mohammed Benabdellah',       role: 'Data Scientist',               photo: 'assets/images/team/mohammed.jpeg',  linkedin: '#' },
+    { name: 'Ayoub El Hassani El Alaoui', role: 'Data Scientist & AI Engineer', photo: 'assets/images/team/ayoub.jpeg',     linkedin: '#' },
+  ];
 
-    fixture = TestBed.createComponent(NavbarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  constructor(public languageService: LanguageService) {}
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  @HostListener('window:scroll')
+  onScroll(): void {
+    this.isScrolled = window.scrollY > 10;
+  }
+
+  toggleMobileMenu(): void { this.isMobileMenuOpen = !this.isMobileMenuOpen; }
+  closeMobileMenu(): void { this.isMobileMenuOpen = false; }
+
+  openDemo(): void {
+    this.showDemoModal = true;
+    this.success = false;
+    this.error = false;
+    this.submitted = false;
+    this.appointment = { name: '', email: '', phone: '', date: '', message: '' };
+  }
+
+  isFutureDate(): boolean {
+    if (!this.appointment.date) return true;
+    const selected = new Date(this.appointment.date);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return selected >= today;
+  }
+
+  isValidEmail(): boolean {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.appointment.email);
+  }
+
+  async submitDemo(): Promise<void> {
+    this.submitted = true;
+    const { name, email, phone, date } = this.appointment;
+    if (!name || !email || !phone || !date || !this.isValidEmail() || !this.isFutureDate()) return;
+
+    this.loading = true;
+    try {
+      await emailjs.send(
+        'service_h11m5h7',
+        'template_eadzud7',
+        {
+          name: this.appointment.name,
+          email: this.appointment.email,
+          phone: this.appointment.phone,
+          date: this.appointment.date,
+          message: this.appointment.message,
+        },
+        'T-Cmc7k0rACWtrZvh'
+      );
+      this.success = true;
+      this.error = false;
+      this.appointment = { name: '', email: '', phone: '', date: '', message: '' };
+      this.submitted = false;
+      setTimeout(() => { this.success = false; this.showDemoModal = false; }, 2500);
+    } catch {
+      this.error = true;
+    } finally {
+      this.loading = false;
+    }
+  }
+}
