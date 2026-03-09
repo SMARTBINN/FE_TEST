@@ -27,13 +27,13 @@ export class NavbarComponent {
   appointment = { name: '', email: '', phone: '', date: '', message: '' };
 
   teamMembers = [
-    { name: 'Zakaria Taskri',             role: 'Chef De Projet',             photo: 'assets/images/team/zakaria.jpeg',   linkedin: '#' },
+    { name: 'Zakaria Taskri',             role: 'Chef De Projet',             photo: 'assets/images/team/zakaria.png',   linkedin: '#' },
     { name: 'Badreddine Tirgani',         role: 'Consultant Full Stack',             photo: 'assets/images/team/badreddine.png', linkedin: '#' },
-    { name: 'Yassine Nait abdellah',      role: 'Electrical Engineer',          photo: 'assets/images/team/yassine.jpeg',   linkedin: '#' },
-    { name: 'Wiam En najih',              role: 'Quality Engineer',             photo: 'assets/images/team/wiam.jpeg',      linkedin: '#' },
+    { name: 'Yassine Nait abdellah',      role: 'Electrical Engineer',          photo: 'assets/images/team/yassine.png',   linkedin: '#' },
+    { name: 'Wiam En najih',              role: 'Quality Engineer',             photo: 'assets/images/team/wiam.png',      linkedin: '#' },
     { name: 'Fatine Joaouad',             role: 'Waste Management Consultant',  photo: 'assets/images/team/fatine.png',     linkedin: '#' },
-    { name: 'Mohammed Benabdellah',       role: 'Data Scientist',               photo: 'assets/images/team/mohammed.jpeg',  linkedin: '#' },
-    { name: 'Ayoub El Hassani El Alaoui', role: 'Data Scientist & AI Engineer', photo: 'assets/images/team/ayoub.jpeg',     linkedin: '#' },
+    { name: 'Mohammed Benabdellah',       role: 'Data Scientist',               photo: 'assets/images/team/mohammed.png',  linkedin: '#' },
+    { name: 'Ayoub El Hassani El Alaoui', role: 'Data Scientist & AI Engineer', photo: 'assets/images/team/ayoub.png',     linkedin: '#' },
   ];
 
   constructor(public languageService: LanguageService) {}

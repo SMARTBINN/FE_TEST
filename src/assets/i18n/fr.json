@@ -3,6 +3,8 @@
     "HOME": "Accueil",
     "SERVICES": "Services",
     "ABOUT": "Qui sommes-nous ?",
+    "VALUES": "Nos Valeurs",
+    "TEAM": "Notre Équipe",
     "PRODUCTS": "Nos Produits",
     "CTA": "Nous équiper"
   },
@@ -23,7 +25,7 @@
     "BADGE_DASHBOARD_TITLE": "Dashboard Live",
     "BADGE_AI_LABEL": "Intelligence",
     "BADGE_AI_TITLE": "IA Activée",
-    "BIN_LABEL": "🌿 Organique",
+    "BIN_LABEL": "Organique",
     "BIN_FILL": "63% plein",
     "LAPTOP_TOTAL": "1,240 kg",
     "LAPTOP_TOTAL_LABEL": "Total collecté",
@@ -34,20 +36,21 @@
   "SERVICES": {
     "TITLE": "Nos services",
     "SUBTITLE": "Des solutions complètes pour optimiser votre gestion des déchets, de la collecte à l'analyse des données.",
+    "HEADING": "Ce que nous proposons",
     "S1": "Tri et Collecte Intelligente des déchets",
     "S2": "Monitoring & Supervision",
     "S3": "Analyse et reporting environnemental",
     "LEARN_MORE": "En savoir plus",
     "S1_F1": "Capteurs de remplissage temps réel",
-"S1_F2": "Collecte optimisée par IA",
-"S1_F3": "Bacs connectés personnalisables",
-"S2_F1": "Tableaux de bord interactifs",
-"S2_F2": "Alertes intelligentes",
-"S2_F3": "Suivi en temps réel",
-"S3_F1": "Rapports CO₂ et économiques",
-"S3_F2": "Benchmarking par site",
-"S3_F3": "Recommandations RSE",
-"NOTE": "* Le détail de chaque service s'ouvre dans une section dédiée ci-dessous"
+    "S1_F2": "Collecte optimisée par IA",
+    "S1_F3": "Bacs connectés personnalisables",
+    "S2_F1": "Tableaux de bord interactifs",
+    "S2_F2": "Alertes intelligentes",
+    "S2_F3": "Suivi en temps réel",
+    "S3_F1": "Rapports CO₂ et économiques",
+    "S3_F2": "Benchmarking par site",
+    "S3_F3": "Recommandations RSE",
+    "NOTE": "* Le détail de chaque service s'ouvre dans une section dédiée ci-dessous"
   },
 
   "PRODUCTS": {
@@ -56,9 +59,11 @@
     "P1_TITLE": "Waste Loop",
     "P1_DESC": "Avec Waste Loop, découvrez nos poubelles durables et connectées, une innovation pour vous aider à atteindre vos objectifs de réduction de coût.",
     "P1_CTA": "Voir prototype",
+    "P1_NOTE": "Prototype en cours de développement",
     "P2_TITLE": "Waste Link",
     "P2_DESC": "Avec Waste Link, simplifiez le management de vos opérations. Utilisez les données pour vous améliorer et créer de la valeur en recyclant vos déchets.",
-    "P2_CTA": "Voir une vidéo"
+    "P2_CTA": "Voir une vidéo",
+    "P2_NOTE": "Vidéo de démonstration bientôt disponible"
   },
 
   "WASTE": {
@@ -116,12 +121,12 @@
   "STATS": {
     "TITLE": "Pourquoi agir contre le gaspillage alimentaire ?",
     "SUBTITLE": "Chaque tonne de nourriture jetée, c'est de l'argent gaspillé, de l'eau précieuse disparue.",
-    "S1_VAL": "4,2",  "S1_UNIT": "milliards de tonnes", "S1_DESC": "de nourriture jetée en 2022",
-    "S2_VAL": "3,9",  "S2_UNIT": "milliards de litres",  "S2_DESC": "d'eau gaspillée",
-    "S3_VAL": "113",  "S3_UNIT": "kg",                   "S3_DESC": "par habitant",
-    "S4_VAL": "40",   "S4_UNIT": "milliards de dollars", "S4_DESC": "de pertes économiques",
-    "S5_VAL": "+900k","S5_UNIT": "tonnes",               "S5_DESC": "supplémentaires (France)",
-    "S6_VAL": "1,3",  "S6_UNIT": "milliards de tonnes",  "S6_DESC": "de CO₂ émis"
+    "S1_VAL": "4,2",   "S1_UNIT": "milliards de tonnes", "S1_DESC": "de nourriture jetée en 2022",
+    "S2_VAL": "3,9",   "S2_UNIT": "milliards de litres",  "S2_DESC": "d'eau gaspillée",
+    "S3_VAL": "113",   "S3_UNIT": "kg",                   "S3_DESC": "par habitant",
+    "S4_VAL": "40",    "S4_UNIT": "milliards de dollars", "S4_DESC": "de pertes économiques",
+    "S5_VAL": "+900k", "S5_UNIT": "tonnes",               "S5_DESC": "supplémentaires (France)",
+    "S6_VAL": "1,3",   "S6_UNIT": "milliards de tonnes",  "S6_DESC": "de CO₂ émis"
   },
 
   "VALUES": {
@@ -157,5 +162,46 @@
     "SUCCESS_TITLE": "Message envoyé !",
     "SUCCESS_DESC": "Merci de nous avoir contactés. Notre équipe reviendra vers vous très prochainement.",
     "FOOTER": "© {year} BIOLOOP. Tous droits réservés."
+  },
+
+  "TEAM": {
+    "TITLE": "Notre Équipe",
+    "SUBTITLE": "Des experts passionnés au service de l'innovation verte."
+  },
+
+  "FOOTER": {
+    "BRAND_DESC": "Solution intelligente de gestion des déchets organiques pour les entreprises et collectivités.",
+    "NAV_TITLE": "Navigation",
+    "NAV_HOME": "Accueil",
+    "NAV_SERVICES": "Services",
+    "NAV_PRODUCTS": "Produits",
+    "NAV_VALUES": "Nos Valeurs",
+    "NAV_TEAM": "Notre Équipe",
+    "NAV_CONTACT": "Contact",
+    "CONTACT_TITLE": "Contact",
+    "RIGHTS": "Tous droits réservés.",
+    "STATUS": "Système opérationnel",
+    "ADMIN": "Espace Admin"
+  },
+
+  "APPOINTMENT": {
+    "TITLE": "Demander une Démo",
+    "SUBTITLE": "Notre équipe vous contactera sous 24h",
+    "NAME": "Nom complet",
+    "EMAIL": "Email",
+    "PHONE": "Téléphone",
+    "DATE": "Date souhaitée",
+    "MESSAGE": "Message (optionnel)",
+    "SUBMIT": "Envoyer la demande",
+    "SENDING": "Envoi en cours...",
+    "SUCCESS_TITLE": "Demande envoyée !",
+    "SUCCESS_DESC": "Merci ! Notre équipe reviendra vers vous très prochainement.",
+    "ERROR_NAME": "Nom requis",
+    "ERROR_EMAIL": "Email requis",
+    "ERROR_EMAIL_FORMAT": "Email invalide",
+    "ERROR_PHONE": "Téléphone requis",
+    "ERROR_DATE_REQUIRED": "Date requise",
+    "ERROR_DATE_FUTURE": "La date doit être dans le futur",
+    "ERROR_SEND": "Une erreur est survenue. Veuillez réessayer."
   }
 }
