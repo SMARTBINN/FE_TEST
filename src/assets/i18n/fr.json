@@ -63,7 +63,9 @@
     "P2_TITLE": "Waste Link",
     "P2_DESC": "Avec Waste Link, simplifiez le management de vos opérations. Utilisez les données pour vous améliorer et créer de la valeur en recyclant vos déchets.",
     "P2_CTA": "Voir une vidéo",
-    "P2_NOTE": "Vidéo de démonstration bientôt disponible"
+    "P2_NOTE": "Vidéo de démonstration bientôt disponible",
+    "P1_BADGE": "IoT Sensor",
+    "P2_BADGE": "App Interface"
   },
 
   "WASTE": {
@@ -96,7 +98,17 @@
     "BENEFITS_TITLE": "Bénéfices clés",
     "B1": "Visibilité complète sur vos activités",
     "B2": "Identification des zones de gaspillage",
-    "B3": "Outil collaboratif pour toutes les équipes"
+    "B3": "Outil collaboratif pour toutes les équipes",
+    "KPI1_LABEL": "Volume Total",
+"KPI1_VAL": "1,240 kg",
+"KPI1_TREND": "12% vs hier",
+"KPI2_LABEL": "Bennes Actives",
+"KPI2_VAL": "24/24",
+"KPI2_STATUS": "100% opérationnel",
+"ALERTS_TITLE": "Alertes Récentes",
+"SEE_ALL": "Voir tout",
+"ALERT1": "Benne #12 — Niveau critique (95%)",
+"ALERT2": "Benne #08 — Maintenance requise"
   },
 
   "ANALYSE": {

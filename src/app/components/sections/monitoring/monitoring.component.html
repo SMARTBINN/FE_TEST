@@ -22,19 +22,19 @@
           <!-- KPI cards -->
           <div class="grid grid-cols-2 gap-4 mb-6">
             <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
-              <div class="text-xs text-gray-400 mb-1">Volume Total</div>
-              <div class="text-2xl font-bold text-gray-900">1,240 kg</div>
+              <div class="text-xs text-gray-400 mb-1">{{ 'MONITORING.KPI1_LABEL' | translate }}</div>
+              <div class="text-2xl font-bold text-gray-900">{{ 'MONITORING.KPI1_VAL' | translate }}</div>
               <div class="text-xs text-green-500 mt-1 flex items-center gap-1">
                 <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
                 </svg>
-                12% vs hier
+                {{ 'MONITORING.KPI1_TREND' | translate }}
               </div>
             </div>
             <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
-              <div class="text-xs text-gray-400 mb-1">Bennes Actives</div>
-              <div class="text-2xl font-bold text-gray-900">24/24</div>
-              <div class="text-xs text-green-500 mt-1">100% opérationnel</div>
+              <div class="text-xs text-gray-400 mb-1">{{ 'MONITORING.KPI2_LABEL' | translate }}</div>
+              <div class="text-2xl font-bold text-gray-900">{{ 'MONITORING.KPI2_VAL' | translate }}</div>
+              <div class="text-xs text-green-500 mt-1">{{ 'MONITORING.KPI2_STATUS' | translate }}</div>
             </div>
           </div>
 
@@ -49,21 +49,21 @@
           <!-- Alerts -->
           <div>
             <div class="flex justify-between items-center mb-3">
-              <span class="text-sm font-semibold text-gray-700">Alertes Récentes</span>
-              <span class="text-xs text-blue-500 cursor-pointer">Voir tout</span>
+              <span class="text-sm font-semibold text-gray-700">{{ 'MONITORING.ALERTS_TITLE' | translate }}</span>
+              <span class="text-xs text-blue-500 cursor-pointer">{{ 'MONITORING.SEE_ALL' | translate }}</span>
             </div>
             <div class="space-y-2">
               <div class="flex items-center gap-3 text-sm p-3 bg-red-50 text-red-700 rounded-lg border border-red-100">
                 <svg class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
                 </svg>
-                Benne #12 — Niveau critique (95%)
+                {{ 'MONITORING.ALERT1' | translate }}
               </div>
               <div class="flex items-center gap-3 text-sm p-3 bg-yellow-50 text-yellow-700 rounded-lg border border-yellow-100">
                 <svg class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
                 </svg>
-                Benne #08 — Maintenance requise
+                {{ 'MONITORING.ALERT2' | translate }}
               </div>
             </div>
           </div>

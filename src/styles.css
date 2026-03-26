@@ -7,44 +7,229 @@
   [dir='rtl'] body { font-family: 'Cairo', sans-serif; }
   html { scroll-behavior: smooth; }
 }
-html.dark * {
-  --tw-bg-opacity: 1;
-}
+
+/* ===== DARK MODE ===== */
 
 html.dark body {
   background-color: #111827 !important;
   color: #f9fafb !important;
 }
 
+/* Sections & layout */
 html.dark section,
-html.dark header,
-html.dark main,
-html.dark div:not([class*="bg-green"]):not([class*="bg-gray-8"]):not([class*="bg-gray-9"]):not([class*="bg-slate"]) {
-  background-color: #1f2937 !important;
-  color: #f9fafb !important;
+html.dark main {
+  background-color: #111827 !important;
 }
 
-html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark p {
-  color: #f9fafb !important;
+html.dark header {
+  background-color: #111827 !important;
 }
 
-html.dark .text-gray-600,
-html.dark .text-gray-700,
-html.dark .text-gray-900 {
-  color: #d1d5db !important;
-}
-
+/* Cards & containers */
 html.dark .bg-white {
   background-color: #1f2937 !important;
 }
 
+html.dark .bg-gray-50,
+html.dark .bg-gray-100 {
+  background-color: #1f2937 !important;
+}
+
+html.dark .bg-green-50,
+html.dark .bg-green-50\/50,
+html.dark .bg-green-50\/40 {
+  background-color: #162318 !important;
+}
+
+html.dark .bg-blue-50 {
+  background-color: #172033 !important;
+}
+
+html.dark .bg-purple-50 {
+  background-color: #1e1b2e !important;
+}
+
+html.dark .bg-red-50 {
+  background-color: #2d1515 !important;
+}
+
+html.dark .bg-yellow-50 {
+  background-color: #2d2510 !important;
+}
+
+/* Gradients */
+html.dark .bg-gradient-to-b,
+html.dark .bg-gradient-to-br,
+html.dark .bg-gradient-to-r {
+  background: #111827 !important;
+}
+
+html.dark .from-white,
+html.dark .from-gray-50 {
+  --tw-gradient-from: #111827 !important;
+}
+
+/* Text colors */
+html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5 {
+  color: #f9fafb !important;
+}
+
+html.dark p,
+html.dark span:not([class*="text-green"]):not([class*="text-blue"]):not([class*="text-purple"]):not([class*="text-red"]):not([class*="text-yellow"]):not([class*="text-white"]) {
+  color: #d1d5db !important;
+}
+
+html.dark .text-gray-900,
+html.dark .text-gray-800,
+html.dark .text-gray-700,
+html.dark .text-gray-600,
+html.dark .text-gray-500,
+html.dark .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+html.dark .text-gray-900 {
+  color: #f9fafb !important;
+}
+
+html.dark .text-gray-800 {
+  color: #f3f4f6 !important;
+}
+
+html.dark .text-gray-700 {
+  color: #e5e7eb !important;
+}
+
+html.dark .text-gray-600 {
+  color: #d1d5db !important;
+}
+
+html.dark .text-gray-500 {
+  color: #9ca3af !important;
+}
+
+/* Borders */
 html.dark .border-gray-100,
 html.dark .border-gray-200 {
   border-color: #374151 !important;
 }
 
+html.dark .border-gray-300 {
+  border-color: #4b5563 !important;
+}
+
+/* Inputs */
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #1f2937 !important;
+  color: #f9fafb !important;
+  border-color: #374151 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Navbar scrolled */
+html.dark .backdrop-blur-md {
+  background-color: rgba(17, 24, 39, 0.95) !important;
+}
+
+/* Shadows */
 html.dark .shadow-sm,
 html.dark .shadow-md,
-html.dark .shadow-lg {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+html.dark .shadow-lg,
+html.dark .shadow-xl,
+html.dark .shadow-2xl {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Stats section */
+html.dark .bg-gray-900 {
+  background-color: #030712 !important;
+}
+
+/* Green badges — keep green */
+html.dark .bg-green-100 { background-color: #14532d !important; }
+html.dark .bg-green-200 { background-color: #166534 !important; }
+html.dark .bg-blue-100  { background-color: #1e3a5f !important; }
+html.dark .bg-purple-100 { background-color: #3b0764 !important; }
+html.dark .bg-orange-100 { background-color: #431407 !important; }
+
+/* Partners section */
+html.dark .grayscale { filter: grayscale(0) brightness(0.8) !important; }
+
+/* Login page */
+html.dark .from-gray-900 {
+  --tw-gradient-from: #030712 !important;
+}
+
+/* Scrollbar */
+html.dark ::-webkit-scrollbar { width: 8px; }
+html.dark ::-webkit-scrollbar-track { background: #1f2937; }
+html.dark ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+html.dark ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+
+/* ===== DARK MODE FIXES ===== */
+
+/* Services cards — icon backgrounds */
+html.dark .bg-green-100 { background-color: #052e16 !important; }
+html.dark .bg-blue-100  { background-color: #0c1a2e !important; }
+html.dark .bg-purple-100 { background-color: #1e0a2e !important; }
+html.dark .bg-green-200 { background-color: #14532d !important; }
+html.dark .bg-blue-200  { background-color: #1e3a5f !important; }
+
+/* Services cards hover background */
+html.dark .from-green-50  { --tw-gradient-from: #052e16 !important; }
+html.dark .from-blue-50   { --tw-gradient-from: #0c1a2e !important; }
+html.dark .from-purple-50 { --tw-gradient-from: #1e0a2e !important; }
+
+/* Monitoring — bar chart */
+html.dark .bg-blue-500 {
+  background-color: #3b82f6 !important;
+  opacity: 0.9 !important;
+}
+
+/* Monitoring — alert cards */
+html.dark .bg-red-50 {
+  background-color: #2d0a0a !important;
+}
+html.dark .border-red-100 {
+  border-color: #7f1d1d !important;
+}
+html.dark .text-red-700 {
+  color: #fca5a5 !important;
+}
+
+html.dark .bg-yellow-50 {
+  background-color: #2d1f0a !important;
+}
+html.dark .border-yellow-100 {
+  border-color: #78350f !important;
+}
+html.dark .text-yellow-700 {
+  color: #fcd34d !important;
+}
+
+/* Monitoring KPI cards */
+html.dark .bg-gray-50 {
+  background-color: #111827 !important;
+}
+html.dark .border-gray-100 {
+  border-color: #374151 !important;
+}
+
+/* Waste collection — progress bars background */
+html.dark .bg-gray-200 {
+  background-color: #374151 !important;
+}
+
+/* Green badge text keep */
+html.dark .text-green-500,
+html.dark .text-green-600,
+html.dark .text-green-700,
+html.dark .text-green-400 {
+  color: inherit !important;
 }
