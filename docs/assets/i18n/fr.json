@@ -1,0 +1,219 @@
+{
+  "NAV": {
+    "HOME": "Accueil",
+    "SERVICES": "Services",
+    "ABOUT": "Qui sommes-nous ?",
+    "VALUES": "Nos Valeurs",
+    "TEAM": "Notre Équipe",
+    "PRODUCTS": "Nos Produits",
+    "CTA": "Nous équiper"
+  },
+
+  "HERO": {
+    "BADGE": "Solution Intelligente",
+    "TITLE1": "Optimisez vos ressources et",
+    "TITLE2": "réduisez vos déchets.",
+    "TITLE3": "Découvrez nos solutions intelligentes.",
+    "SUBTITLE": "Prenez rendez-vous ou laissez-nous vos coordonnées.",
+    "BTN_PRIMARY": "Essayez Bioloop",
+    "BTN_SECONDARY": "Voir la démo",
+    "BADGE_IOT_LABEL": "Connexion",
+    "BADGE_IOT_TITLE": "IoT Connecté",
+    "BADGE_MONITORING_LABEL": "Monitoring",
+    "BADGE_MONITORING_TITLE": "Temps Réel",
+    "BADGE_DASHBOARD_LABEL": "Tableau de bord",
+    "BADGE_DASHBOARD_TITLE": "Dashboard Live",
+    "BADGE_AI_LABEL": "Intelligence",
+    "BADGE_AI_TITLE": "IA Activée",
+    "BIN_LABEL": "Organique",
+    "BIN_FILL": "63% plein",
+    "LAPTOP_TOTAL": "1,240 kg",
+    "LAPTOP_TOTAL_LABEL": "Total collecté",
+    "LAPTOP_BINS": "24/24",
+    "LAPTOP_BINS_LABEL": "Bennes actives"
+  },
+
+  "SERVICES": {
+    "TITLE": "Nos services",
+    "SUBTITLE": "Des solutions complètes pour optimiser votre gestion des déchets, de la collecte à l'analyse des données.",
+    "HEADING": "Ce que nous proposons",
+    "S1": "Tri et Collecte Intelligente des déchets",
+    "S2": "Monitoring & Supervision",
+    "S3": "Analyse et reporting environnemental",
+    "LEARN_MORE": "En savoir plus",
+    "S1_F1": "Capteurs de remplissage temps réel",
+    "S1_F2": "Collecte optimisée par IA",
+    "S1_F3": "Bacs connectés personnalisables",
+    "S2_F1": "Tableaux de bord interactifs",
+    "S2_F2": "Alertes intelligentes",
+    "S2_F3": "Suivi en temps réel",
+    "S3_F1": "Rapports CO₂ et économiques",
+    "S3_F2": "Benchmarking par site",
+    "S3_F3": "Recommandations RSE",
+    "NOTE": "* Le détail de chaque service s'ouvre dans une section dédiée ci-dessous"
+  },
+
+  "PRODUCTS": {
+    "TITLE": "Nos Produits",
+    "SUBTITLE": "Des outils technologiques innovants pour connecter et simplifier votre gestion des déchets.",
+    "P1_TITLE": "Waste Loop",
+    "P1_DESC": "Avec Waste Loop, découvrez nos poubelles durables et connectées, une innovation pour vous aider à atteindre vos objectifs de réduction de coût.",
+    "P1_CTA": "Voir prototype",
+    "P1_NOTE": "Prototype en cours de développement",
+    "P2_TITLE": "Waste Link",
+    "P2_DESC": "Avec Waste Link, simplifiez le management de vos opérations. Utilisez les données pour vous améliorer et créer de la valeur en recyclant vos déchets.",
+    "P2_CTA": "Voir une vidéo",
+    "P2_NOTE": "Vidéo de démonstration bientôt disponible",
+    "P1_BADGE": "IoT Sensor",
+    "P2_BADGE": "App Interface"
+  },
+
+  "WASTE": {
+    "BADGE": "Service",
+    "TITLE": "Tri et Collecte Intelligente des déchets",
+    "SUBTITLE": "Avec Waste Loop, nous proposons une gamme flexible de bacs connectés, conçus pour s'adapter à chaque besoin.",
+    "F1": "Équipés de capteurs IoT pour mesurer en temps réel le niveau de remplissage, le poids, et transmettre des données précieuses.",
+    "F2": "Alimentées par IA pour analyser les flux de déchets, détecter des schémas récurrents et générer des insights stratégiques.",
+    "F3": "Personnalisables (formats variés) : petites, moyennes ou grandes, selon le volume attendu.",
+    "GAINS_TITLE": "Ce que vous gagnez :",
+    "G1": "Une collecte optimisée et moins coûteuse.",
+    "G2": "Des informations concrètes pour réduire le gaspillage.",
+    "G3": "Un outil qui s'adapte à vos besoins spécifiques.",
+    "BIN_TITLE": "Benne Connectée",
+    "BIN_SUBTITLE": "Transmission de données en temps réel",
+    "FILL": "Remplissage",
+    "BATTERY": "Batterie"
+  },
+
+  "MONITORING": {
+    "BADGE": "Application",
+    "TITLE": "Monitoring & Supervision",
+    "SUBTITLE": "Avec Waste Link, gardez le contrôle total sur vos flux de déchets.",
+    "F1_TITLE": "Tableaux de bord",
+    "F1_DESC": "Visuels et interactifs pour une compréhension immédiate.",
+    "F2_TITLE": "Suivi instantané",
+    "F2_DESC": "Des volumes de déchets et de leur évolution dans le temps.",
+    "F3_TITLE": "Alertes intelligentes",
+    "F3_DESC": "Pour anticiper les débordements ou anomalies.",
+    "BENEFITS_TITLE": "Bénéfices clés",
+    "B1": "Visibilité complète sur vos activités",
+    "B2": "Identification des zones de gaspillage",
+    "B3": "Outil collaboratif pour toutes les équipes",
+    "KPI1_LABEL": "Volume Total",
+"KPI1_VAL": "1,240 kg",
+"KPI1_TREND": "12% vs hier",
+"KPI2_LABEL": "Bennes Actives",
+"KPI2_VAL": "24/24",
+"KPI2_STATUS": "100% opérationnel",
+"ALERTS_TITLE": "Alertes Récentes",
+"SEE_ALL": "Voir tout",
+"ALERT1": "Benne #12 — Niveau critique (95%)",
+"ALERT2": "Benne #08 — Maintenance requise"
+  },
+
+  "ANALYSE": {
+    "BADGE": "Reporting",
+    "TITLE": "Analyse et reporting environnemental",
+    "SUBTITLE": "Vos données deviennent un véritable levier stratégique.",
+    "C1_TITLE": "Rapports Détaillés",
+    "C1_DESC": "Rapports clairs sur vos pertes en Dirhams, CO₂, et litres d'eau.",
+    "C2_TITLE": "Analyses Comparatives",
+    "C2_DESC": "Benchmarking par site, période ou type de déchet.",
+    "C3_TITLE": "Recommandations RSE",
+    "C3_DESC": "Conseils concrets pour réduire vos pertes.",
+    "BENEFITS_TITLE": "Les bénéfices pour votre entreprise",
+    "B1": "Mesurer précisément votre impact environnemental",
+    "B2": "Prendre des décisions fondées sur des données fiables",
+    "B3": "Savoir exactement où vos ressources sont gaspillées",
+    "STAT": "-25%",
+    "STAT_DESC": "de gaspillage en moyenne dès la première année",
+    "AUDIT_BTN": "Demander un audit"
+  },
+
+  "STATS": {
+    "TITLE": "Pourquoi agir contre le gaspillage alimentaire ?",
+    "SUBTITLE": "Chaque tonne de nourriture jetée, c'est de l'argent gaspillé, de l'eau précieuse disparue.",
+    "S1_VAL": "4,2",   "S1_UNIT": "milliards de tonnes", "S1_DESC": "de nourriture jetée en 2022",
+    "S2_VAL": "3,9",   "S2_UNIT": "milliards de litres",  "S2_DESC": "d'eau gaspillée",
+    "S3_VAL": "113",   "S3_UNIT": "kg",                   "S3_DESC": "par habitant",
+    "S4_VAL": "40",    "S4_UNIT": "milliards de dollars", "S4_DESC": "de pertes économiques",
+    "S5_VAL": "+900k", "S5_UNIT": "tonnes",               "S5_DESC": "supplémentaires (France)",
+    "S6_VAL": "1,3",   "S6_UNIT": "milliards de tonnes",  "S6_DESC": "de CO₂ émis"
+  },
+
+  "VALUES": {
+    "TITLE": "Nos Valeurs",
+    "SUBTITLE": "Pour nous, propreté, durabilité et solidarité vont de pair.",
+    "V1_TITLE": "Propreté",   "V1_DESC": "Des espaces plus sains et agréables pour tous.",
+    "V2_TITLE": "Durabilité", "V2_DESC": "Une approche respectueuse de l'environnement sur le long terme.",
+    "V3_TITLE": "Solidarité", "V3_DESC": "Soutien aux collecteurs informels et inclusion sociale."
+  },
+
+  "PARTNERS": {
+    "TITLE": "Nos partenaires",
+    "COMING": "+ UM6P etc (à venir ...)"
+  },
+
+  "CONTACT": {
+    "TITLE": "Contactez-nous",
+    "PHONE_TITLE": "Téléphone",
+    "PHONE_NUM": "+212 6 00 00 00 00",
+    "PHONE_HOURS": "Du Lundi au Vendredi, 9h-18h",
+    "EMAIL_TITLE": "E-mail",
+    "EMAIL_ADDR": "contact@bioloop.com",
+    "EMAIL_NOTE": "Nous répondons sous 24h",
+    "SOCIAL_TITLE": "Réseaux Sociaux",
+    "FORM_TITLE": "Envoyez-nous un message",
+    "NAME_LABEL": "Nom complet",
+    "NAME_PLACEHOLDER": "Votre nom",
+    "EMAIL_LABEL": "Adresse e-mail",
+    "EMAIL_PLACEHOLDER": "vous@exemple.com",
+    "MSG_LABEL": "Message",
+    "MSG_PLACEHOLDER": "Comment pouvons-nous vous aider ?",
+    "SUBMIT": "Envoyer le message",
+    "SUCCESS_TITLE": "Message envoyé !",
+    "SUCCESS_DESC": "Merci de nous avoir contactés. Notre équipe reviendra vers vous très prochainement.",
+    "FOOTER": "© {year} BIOLOOP. Tous droits réservés."
+  },
+
+  "TEAM": {
+    "TITLE": "Notre Équipe",
+    "SUBTITLE": "Des experts passionnés au service de l'innovation verte."
+  },
+
+  "FOOTER": {
+    "BRAND_DESC": "Solution intelligente de gestion des déchets organiques pour les entreprises et collectivités.",
+    "NAV_TITLE": "Navigation",
+    "NAV_HOME": "Accueil",
+    "NAV_SERVICES": "Services",
+    "NAV_PRODUCTS": "Produits",
+    "NAV_VALUES": "Nos Valeurs",
+    "NAV_TEAM": "Notre Équipe",
+    "NAV_CONTACT": "Contact",
+    "CONTACT_TITLE": "Contact",
+    "RIGHTS": "Tous droits réservés.",
+    "STATUS": "Système opérationnel",
+    "ADMIN": "Espace Admin"
+  },
+
+  "APPOINTMENT": {
+    "TITLE": "Demander une Démo",
+    "SUBTITLE": "Notre équipe vous contactera sous 24h",
+    "NAME": "Nom complet",
+    "EMAIL": "Email",
+    "PHONE": "Téléphone",
+    "DATE": "Date souhaitée",
+    "MESSAGE": "Message (optionnel)",
+    "SUBMIT": "Envoyer la demande",
+    "SENDING": "Envoi en cours...",
+    "SUCCESS_TITLE": "Demande envoyée !",
+    "SUCCESS_DESC": "Merci ! Notre équipe reviendra vers vous très prochainement.",
+    "ERROR_NAME": "Nom requis",
+    "ERROR_EMAIL": "Email requis",
+    "ERROR_EMAIL_FORMAT": "Email invalide",
+    "ERROR_PHONE": "Téléphone requis",
+    "ERROR_DATE_REQUIRED": "Date requise",
+    "ERROR_DATE_FUTURE": "La date doit être dans le futur",
+    "ERROR_SEND": "Une erreur est survenue. Veuillez réessayer."
+  }
+}
