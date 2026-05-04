@@ -33,9 +33,7 @@ export class NavbarComponent {
     { name: 'Wiam En najih',              role: 'Quality Engineer',             photo: 'assets/images/team/wiam.png',      linkedin: 'https://www.linkedin.com/in/wiam-en-najih-5b0469255/' },
     { name: 'Fatine Joaouad',             role: 'Waste Management Consultant',  photo: 'assets/images/team/fatine.png',     linkedin: 'https://www.linkedin.com/in/fatine-jaouad-376633121/' },
     { name: 'Mohammed Benabdellah',       role: 'Data Scientist',               photo: 'assets/images/team/mohammed.png',  linkedin: 'https://www.linkedin.com/in/mohammed-benabdallah1/' },
-    { name: 'Ayoub El Hassani El Alaoui', role: 'Data Scientist & AI Engineer', photo: 'assets/images/team/ayoub.png',     linkedin: 'https://www.linkedin.com/in/ayoub-el-hassani-el-alaoui/' },
-    { name: 'Kaoutar Izi', role: 'UX / Frontend Developer', photo: 'assets/images/team/kaoutar.jpg',     linkedin: 'https://www.linkedin.com/in/kaoutar-izi-3249351b8/' },
-
+    { name: 'Ayoub El Hassani El Alaoui', role: 'Data Scientist & AI Engineer', photo: 'assets/images/team/ayoub.png',     linkedin: 'https://www.linkedin.com/in/ayoub-el-hassani-el-alaoui/' }
   ];
 
   constructor(public languageService: LanguageService) {}
